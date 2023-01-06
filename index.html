@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chatGptLike</title>
+    <style>
+      div.scroll {
+        background-color: aliceblue;
+        width: 500px;
+        height: 150px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="message" />
+      <input type="submit" value="submit" />
+    </form>
+    <div id="display" class="scroll"></div>
+  </body>
+  <script src="./script.js"></script>
+</html>
