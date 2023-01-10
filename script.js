@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  messages.push({ message: message.value, date: formatDateTime(new Date()) });
+  messages.push({ message: message.value, date: dateTimeFormat() });
   localStorage.setItem("messages", JSON.stringify(messages));
   loadMessages();
   message.innerText = "";
@@ -42,7 +42,7 @@ const loadMessages = () => {
 
 const formatDateTime = (date) => {
   const month = date.getMonth();
-  const days = date.getDay();
+  const days = date.getDate();
   const fullYear = date.getFullYear();
   let hours = date.getHours();
   let minutes = date.getMinutes();
@@ -53,4 +53,21 @@ const formatDateTime = (date) => {
   let strDateTime = `${months[month]} ${days}, ${fullYear} ${hours}:${minutes} ${ampm}`;
 
   return strDateTime;
+};
+
+const dateTimeFormat = () => {
+  const now = new Date();
+  const options = {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  };
+  const dateTimeString = new Intl.DateTimeFormat("en-US", options).format(now);
+
+  console.log(dateTimeString); // "Jan 10, 2023 1:35 PM"
+
+  return dateTimeString;
 };
