@@ -56,9 +56,10 @@ const formatDateTime = (date) => {
 };
 
 const dateTimeFormat = () => {
+  https://betterprogramming.pub/formatting-dates-with-the-datetimeformat-object-9c808dc58604
   const now = new Date();
   const options = {
-    month: "short",
+    month: "short", //
     day: "numeric",
     year: "numeric",
     hour: "numeric",
