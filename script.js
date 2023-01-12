@@ -36,7 +36,7 @@ const loadMessages = () => {
   display.innerHTML = "";
   messages.forEach(({ message, date }) => {
     console.log(`${date} ${message}`);
-    display.innerHTML += `<div><hr><h6>${date}</h6> <h2>${message}</h2><hr></div>`;
+    display.innerHTML += `<div><hr><h6 style="text-align: left; margin-top: -5px">${date}</h6> <h2 style="text-align: left;margin-top: -30px;">${message}</h2><hr></div>`;
   });
 };
 
@@ -56,7 +56,7 @@ const formatDateTime = (date) => {
 };
 
 const dateTimeFormat = () => {
-  https://betterprogramming.pub/formatting-dates-with-the-datetimeformat-object-9c808dc58604
+  // https://betterprogramming.pub/formatting-dates-with-the-datetimeformat-object-9c808dc58604
   const now = new Date();
   const options = {
     month: "short", //
